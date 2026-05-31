@@ -63,7 +63,7 @@ a {
 }
 
 .hero-copy {
-  max-width: 760px;
+  max-width: min(760px, 58vw);
   position: relative;
   z-index: 1;
 }
@@ -85,9 +85,10 @@ p {
 }
 
 h1 {
-  font-size: clamp(4.4rem, 12vw, 10.8rem);
+  font-size: clamp(4.4rem, 10vw, 10.8rem);
   line-height: 0.86;
   margin-bottom: 28px;
+  white-space: nowrap;
 }
 
 h2 {
@@ -206,6 +207,10 @@ p {
   .hero {
     min-height: auto;
   }
+
+  .hero-copy {
+    max-width: 760px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -214,6 +219,6 @@ p {
   }
 
   h1 {
-    font-size: clamp(4rem, 23vw, 6.4rem);
+    font-size: clamp(3.6rem, 19vw, 6.4rem);
   }
 }
