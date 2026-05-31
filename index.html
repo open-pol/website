@@ -8,219 +8,67 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Open PoL home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>Open PoL</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#problem">Problem</a>
-        <a href="#stack">Stack</a>
-        <a href="#model">Model</a>
-        <a href="#principles">Principles</a>
-        <a href="#research">Research</a>
-      </nav>
-    </header>
-
     <main id="top">
-      <section class="hero" aria-label="Open PoL introduction">
-        <picture>
+      <section class="hero">
+        <picture class="hero-image">
           <img
             src="assets/open-pol-hero.png"
             alt="Open hardware witness devices and dashboards for decentralized proof-of-location evidence."
           >
         </picture>
         <div class="hero-shade" aria-hidden="true"></div>
-        <div class="hero-content">
+        <div class="hero-copy">
           <p class="eyebrow">Open proof-of-location infrastructure</p>
           <h1>Open PoL</h1>
-          <p class="hero-copy">
-            A public home for ideas, protocols, and open-source work around
-            verifiable claims about where and when physical events happened.
+          <p>
+            A public home for ideas about verifiable claims of
+            place, time, and physical context.
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#stack">Explore the stack</a>
-            <a class="button secondary" href="#research">Read the research</a>
-          </div>
         </div>
       </section>
 
-      <section id="problem" class="section intro-section">
-        <div class="section-kicker">Why this matters</div>
-        <div class="split">
-          <div>
-            <h2>The internet lacks open primitives for witnessing real-world events.</h2>
-          </div>
-          <div class="lead-copy">
-            <p>
-              Digital systems increasingly depend on claims about the physical
-              world: where a record was created, what context surrounded an
-              observation, and whether the same claim can be checked later.
-              Today those claims often arrive as weak metadata, platform trust,
-              GNSS coordinates, device signatures, or post-hoc forensic guesses.
-            </p>
-            <p>
-              Open PoL treats location as a verifiable digital primitive. The
-              goal is to make place, time, and capture context inspectable,
-              contestable, and reusable across public-interest systems.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section band">
-        <div class="metric-grid" aria-label="Open PoL focus areas">
-          <article>
-            <span class="metric-label">1</span>
-            <h3>Presence</h3>
-            <p>Independent witnesses attest that a prover was inside a bounded place at a bounded time.</p>
-          </article>
-          <article>
-            <span class="metric-label">2</span>
-            <h3>Context</h3>
-            <p>Local signals and policy checks add evidence about the environment around a claim.</p>
-          </article>
-          <article>
-            <span class="metric-label">3</span>
-            <h3>Provenance</h3>
-            <p>Evidence records bind content, telemetry, or decisions to their capture-time assumptions.</p>
-          </article>
-          <article>
-            <span class="metric-label">4</span>
-            <h3>Verification</h3>
-            <p>Anyone with the evidence object and verifier can inspect what was proven and what was not.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="stack" class="section stack-section">
-        <div class="section-kicker">The witness-machine idea</div>
-        <div class="split">
-          <div>
-            <h2>From self-reported coordinates to local, decentralized witnessing.</h2>
-          </div>
-          <div class="lead-copy">
-            <p>
-              Proof-of-Location systems move trust away from the capture device
-              alone. A witness zone can combine ranging, local networking,
-              identity, policies, sensor commitments, and signed evidence
-              records so a verifier can reason about a real-world claim.
-            </p>
-          </div>
-        </div>
-
-        <div class="stack-map" aria-label="Open PoL stack">
-          <article>
-            <h3>Prover</h3>
-            <p>The device or actor asking for a claim to be witnessed.</p>
-          </article>
-          <article>
-            <h3>Witness zone</h3>
-            <p>Independent local nodes that check place, time, signal, and policy assumptions.</p>
-          </article>
-          <article>
-            <h3>Evidence object</h3>
-            <p>A signed, referenceable record binding a claim to proof material and disclosure choices.</p>
-          </article>
-          <article>
-            <h3>Verifier</h3>
-            <p>Software that checks signatures, policies, freshness, quorum, and assurance limits.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="model" class="section model-section">
-        <div class="section-kicker">Layered model</div>
-        <div class="split">
-          <div>
-            <h2>PoL is a stack, not a single location check.</h2>
-          </div>
-          <div class="lead-copy">
-            <p>
-              The core thesis work frames Proof-of-Location as a layered system
-              that sits alongside networking, zone management, localization,
-              consensus, identity, and privacy. That framing matters for Open
-              PoL because capture-time provenance needs a full protocol stack,
-              not a coordinate field.
-            </p>
-          </div>
-        </div>
-        <figure class="figure-panel">
-          <img
-            src="assets/pol-layers-transparent.png"
-            alt="Layered Proof-of-Location architecture with networking, zone management, localization, consensus, identity, and privacy layers."
-          >
-        </figure>
-      </section>
-
-      <section id="principles" class="section principles">
-        <div class="section-kicker">Design principles</div>
-        <h2>Public-interest digital trust should be inspectable.</h2>
-        <div class="principle-list">
-          <article>
-            <h3>Open before authoritative</h3>
-            <p>Trust should come from reviewable protocols, evidence formats, and implementations.</p>
-          </article>
-          <article>
-            <h3>Privacy-aware by default</h3>
-            <p>Useful proof should not mean publishing raw movement traces or unnecessary sensor data.</p>
-          </article>
-          <article>
-            <h3>Adversarially evaluated</h3>
-            <p>Distance fraud, replay, stale claims, staged scenes, and screen replay are first-class tests.</p>
-          </article>
-          <article>
-            <h3>Interoperable evidence</h3>
-            <p>PoL evidence should be referenceable by provenance, credential, audit, and policy systems.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="research" class="section research-section">
-        <div class="section-kicker">Research base</div>
-        <div class="research-layout">
-          <div>
-            <h2>Grounded in decentralized PoL, privacy, and capture-time authenticity research.</h2>
-            <p class="lead-copy">
-              Open PoL builds on work around decentralized Proof-of-Location
-              systems, privacy-preserving compliance, location-data provenance
-              risks, and capture-time content provenance.
-            </p>
-          </div>
-          <div class="paper-list">
-            <a href="https://doi.org/10.1038/s41598-025-04566-4">
-              Decentralized Proof-of-Location systems for trust, scalability, and privacy in digital societies
-            </a>
-            <a href="https://arxiv.org/abs/2508.14230">
-              A Taxonomy and Methodology for Proof-of-Location Systems
-            </a>
-            <a href="https://arxiv.org/abs/2604.13668">
-              Where Trust Fails: Mapping Location-Data Provenance Risks in Europe
-            </a>
-            <a href="https://arxiv.org/abs/2603.27883">
-              Decentralized Proof-of-Location for Content Provenance: Towards Capture-Time Authenticity
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section cta-section">
+      <section id="references" class="section reference-section">
         <div>
-          <div class="section-kicker">Open work</div>
-          <h2>Open PoL is the public layer for a practical witness-machine stack.</h2>
+          <h2>Research base</h2>
         </div>
-        <p>
-          The next outputs should make the idea runnable: reference code,
-          hardware notes, evidence schemas, policies, verifier logic, tests,
-          and demos that show the limits as clearly as the capabilities.
-        </p>
-        <a class="button primary" href="https://github.com/open-pol/website">GitHub repository</a>
+        <ol class="references">
+          <li>
+            <a href="https://doi.org/10.1038/s41598-025-04566-4">
+              <span class="citation-authors">Brito, E., Hadachi, A., Kamm, L., &amp; Norbisrath, U. (2025).</span>
+              <cite>Decentralized Proof-of-Location systems for trust, scalability, and privacy in digital societies.</cite>
+              <span class="citation-venue">Scientific Reports.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://doi.org/10.1007/978-3-032-15140-7_13">
+              <span class="citation-authors">Brito, E., Castillo, F., Kamm, L., Hadachi, A., &amp; Norbisrath, U. (2025).</span>
+              <cite>A Taxonomy and Methodology for Proof-of-Location Systems.</cite>
+              <span class="citation-venue">EDOC 2025, Springer.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://doi.org/10.1007/978-3-032-00642-4_20">
+              <span class="citation-authors">Bogdanov, D., Brito, E., Jaakson, A., Laud, P., &amp; Rebane, R. (2025).</span>
+              <cite>Zero-Knowledge Proof-of-Location Protocols for Vehicle Subsidies and Taxation Compliance.</cite>
+              <span class="citation-venue">ARES/SP2I 2025, Springer.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2604.13668">
+              <span class="citation-authors">Brito, E., &amp; Kamm, L. (2026).</span>
+              <cite>Where Trust Fails: Mapping Location-Data Provenance Risks in Europe.</cite>
+              <span class="citation-venue">Accepted at CPDP 2026.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2603.27883">
+              <span class="citation-authors">Brito, E., Castillo, F., Hadachi, A., Norbisrath, U., &amp; Heiss, J. (2026).</span>
+              <cite>Decentralized Proof-of-Location for Content Provenance: Towards Capture-Time Authenticity.</cite>
+              <span class="citation-venue">Accepted at AEDT 2026, in the Companion Proceedings of ICSA 2026.</span>
+            </a>
+          </li>
+        </ol>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <span>Open PoL</span>
-      <span>Open proof-of-location ideas by Eduardo Brito.</span>
-    </footer>
   </body>
 </html>
