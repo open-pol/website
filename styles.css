@@ -1,15 +1,16 @@
 :root {
   color-scheme: light;
-  --ink: #17201e;
-  --muted: #586561;
-  --paper: #f6f4ed;
+  --ink: #111111;
+  --muted: #5f6668;
+  --paper: #f7fafa;
   --panel: #ffffff;
-  --line: #d8d7cc;
-  --teal: #00796b;
-  --green: #6d8a34;
-  --amber: #c17a16;
-  --charcoal: #1f2a27;
-  --shadow: 0 18px 60px rgba(23, 32, 30, 0.16);
+  --line: #d7e0e1;
+  --cyan: #00bec8;
+  --cyan-light: #cef6f8;
+  --teal: #33878a;
+  --green: #46a247;
+  --charcoal: #263032;
+  --shadow: 0 18px 60px rgba(17, 17, 17, 0.12);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -36,8 +37,8 @@ a {
 
 .site-header {
   align-items: center;
-  background: rgba(246, 244, 237, 0.88);
-  border-bottom: 1px solid rgba(23, 32, 30, 0.12);
+  background: rgba(247, 250, 250, 0.9);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
   display: flex;
   gap: 24px;
   justify-content: space-between;
@@ -60,9 +61,9 @@ a {
 
 .brand-mark {
   background:
-    radial-gradient(circle at 50% 50%, var(--amber) 0 18%, transparent 20%),
-    conic-gradient(from 45deg, var(--teal), var(--green), var(--amber), var(--teal));
-  border: 1px solid rgba(23, 32, 30, 0.2);
+    radial-gradient(circle at 50% 50%, var(--green) 0 18%, transparent 20%),
+    conic-gradient(from 45deg, var(--cyan), var(--cyan-light), var(--teal), var(--cyan));
+  border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 50%;
   display: inline-block;
   height: 24px;
@@ -87,7 +88,7 @@ a {
 
 .site-nav a:focus,
 .site-nav a:hover {
-  background: rgba(0, 121, 107, 0.1);
+  background: rgba(0, 190, 200, 0.12);
   color: var(--ink);
   outline: none;
 }
@@ -117,8 +118,8 @@ a {
 
 .hero-shade {
   background:
-    linear-gradient(90deg, rgba(246, 244, 237, 0.96) 0%, rgba(246, 244, 237, 0.88) 28%, rgba(246, 244, 237, 0.35) 62%, rgba(246, 244, 237, 0.08) 100%),
-    linear-gradient(0deg, rgba(23, 32, 30, 0.28), rgba(23, 32, 30, 0));
+    linear-gradient(90deg, rgba(247, 250, 250, 0.96) 0%, rgba(247, 250, 250, 0.88) 28%, rgba(247, 250, 250, 0.35) 62%, rgba(247, 250, 250, 0.08) 100%),
+    linear-gradient(0deg, rgba(17, 17, 17, 0.22), rgba(17, 17, 17, 0));
 }
 
 .hero-content {
@@ -129,7 +130,7 @@ a {
 
 .eyebrow,
 .section-kicker {
-  color: var(--teal);
+  color: var(--green);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
@@ -184,7 +185,7 @@ p {
 
 .button {
   align-items: center;
-  border: 1px solid rgba(23, 32, 30, 0.18);
+  border: 1px solid rgba(17, 17, 17, 0.18);
   border-radius: 7px;
   display: inline-flex;
   font-weight: 750;
@@ -195,7 +196,7 @@ p {
 
 .button.primary {
   background: var(--charcoal);
-  color: #fffaf0;
+  color: #ffffff;
 }
 
 .button.secondary {
@@ -205,7 +206,7 @@ p {
 
 .button:focus,
 .button:hover {
-  box-shadow: 0 0 0 3px rgba(193, 122, 22, 0.24);
+  box-shadow: 0 0 0 3px rgba(0, 190, 200, 0.25);
   outline: none;
 }
 
@@ -229,7 +230,7 @@ p {
 }
 
 .band {
-  background: #e9ece1;
+  background: #eaf6f7;
   border-bottom: 1px solid var(--line);
   border-top: 1px solid var(--line);
 }
@@ -246,7 +247,7 @@ p {
 .principle-list article,
 .stack-map article {
   background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(23, 32, 30, 0.12);
+  border: 1px solid rgba(17, 17, 17, 0.12);
   border-radius: 8px;
   min-height: 180px;
   padding: 22px;
@@ -259,7 +260,7 @@ p {
 }
 
 .metric-label {
-  color: var(--amber);
+  color: var(--cyan);
   display: inline-block;
   font-size: 0.86rem;
   font-weight: 850;
@@ -272,15 +273,15 @@ p {
 
 .stack-map article {
   background: var(--charcoal);
-  color: #fffaf0;
+  color: #ffffff;
 }
 
 .stack-map p {
-  color: rgba(255, 250, 240, 0.75);
+  color: rgba(255, 255, 255, 0.74);
 }
 
 .model-section {
-  background: #fbfaf6;
+  background: #f7fafa;
 }
 
 .figure-panel {
@@ -297,26 +298,8 @@ p {
   width: 100%;
 }
 
-.figure-panel figcaption {
-  align-items: center;
-  border-top: 1px solid rgba(23, 32, 30, 0.1);
-  color: var(--muted);
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.95rem;
-  gap: 8px;
-  justify-content: space-between;
-  line-height: 1.45;
-  padding: 14px 18px;
-}
-
-.figure-panel a {
-  color: var(--teal);
-  font-weight: 800;
-}
-
 .principles {
-  background: #fbfaf6;
+  background: #ffffff;
 }
 
 .principle-list {
@@ -325,12 +308,12 @@ p {
 
 .research-section {
   background: var(--ink);
-  color: #fffaf0;
+  color: #ffffff;
 }
 
 .research-section p,
 .research-section .section-kicker {
-  color: rgba(255, 250, 240, 0.74);
+  color: rgba(255, 255, 255, 0.74);
 }
 
 .research-layout {
@@ -340,12 +323,12 @@ p {
 }
 
 .paper-list {
-  border-top: 1px solid rgba(255, 250, 240, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .paper-list a {
-  border-bottom: 1px solid rgba(255, 250, 240, 0.18);
-  color: #fffaf0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
   display: block;
   font-weight: 700;
   line-height: 1.35;
@@ -354,7 +337,7 @@ p {
 
 .paper-list a:focus,
 .paper-list a:hover {
-  color: #ffd18a;
+  color: var(--cyan-light);
   outline: none;
 }
 
@@ -433,8 +416,8 @@ p {
 
   .hero-shade {
     background:
-      linear-gradient(0deg, rgba(246, 244, 237, 0.98) 0%, rgba(246, 244, 237, 0.82) 48%, rgba(246, 244, 237, 0.22) 100%),
-      linear-gradient(90deg, rgba(246, 244, 237, 0.75), rgba(246, 244, 237, 0.08));
+      linear-gradient(0deg, rgba(247, 250, 250, 0.98) 0%, rgba(247, 250, 250, 0.82) 48%, rgba(247, 250, 250, 0.22) 100%),
+      linear-gradient(90deg, rgba(247, 250, 250, 0.75), rgba(247, 250, 250, 0.08));
   }
 
   h1 {
